@@ -2,6 +2,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { AlertScreen } from '../screens/AlertScreen';
 import { Animation101Screen } from '../screens/Animation101Screen';
 import { Animation102Screen } from '../screens/Animation102Screen';
+import { CustomSectionListScreen } from '../screens/CustomSectionListScreen';
 import { HomeScreen } from '../screens/HomeScreen';
 import { PullToRefreshScreen } from '../screens/PullToRefreshScreen';
 import { SwitchScreen } from '../screens/SwitchScreen';
@@ -15,6 +16,7 @@ export type RootStackParamList = {
   AlertScreen: undefined;
   TextInputScreen: undefined;
   PullToRefreshScreen: undefined;
+  CustomSectionListScreen: undefined;
 }
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -24,7 +26,11 @@ export const Navigator = () => {
     <Stack.Navigator
         screenOptions={{
             headerShown: false,
+            cardStyle: {
+              backgroundColor: 'white'
+            }
         }}
+        
     >
       <Stack.Screen name="HomeScreen" component={ HomeScreen } />
       <Stack.Screen name="Animation101Screen" component={ Animation101Screen } />
@@ -33,6 +39,7 @@ export const Navigator = () => {
       <Stack.Screen name="AlertScreen" component={ AlertScreen } />
       <Stack.Screen name="TextInputScreen" component={ TextInputScreen } />
       <Stack.Screen name="PullToRefreshScreen" component={ PullToRefreshScreen } />
+      <Stack.Screen name="CustomSectionListScreen" component={ CustomSectionListScreen } />
     </Stack.Navigator>
   );
 }
