@@ -31,7 +31,7 @@ export const ListMenuItem = ( { menuItem }: Props ) => {
                     size={ 20 } 
                     color={ colors.primary }
                     />
-                <Text style={ styles.textItem }>
+                <Text style={{ ...styles.textItem, color: colors.text }}>
                     { menuItem.name }
                 </Text>
 

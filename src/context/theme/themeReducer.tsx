@@ -17,15 +17,15 @@ export const lightTheme: ThemeState = {
     colors: {
         primary: 'green',
         background: 'white',
-        card: 'green',
-        text: 'yellow',
-        border: 'purple',
-        notification: 'red',
+        card: 'white',
+        text: 'black',
+        border: 'black',
+        notification: 'teal',
     }
 }
 
 export const darkTheme: ThemeState = {
-    dark: false,
+    dark: true,
     currentTheme: 'light',
     dividerColor: 'rgba(0,0,0,0.5)',
     colors: {
