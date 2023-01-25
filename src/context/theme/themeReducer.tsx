@@ -7,6 +7,8 @@ type ThemeAction =
 export interface ThemeState extends Theme {
     currentTheme: 'dark' | 'light';
     dividerColor: string;
+    secondary: string;
+    buttonTextColor: string;
 
 }
 
@@ -21,7 +23,9 @@ export const lightTheme: ThemeState = {
         text: 'black',
         border: 'black',
         notification: 'teal',
-    }
+    },
+    secondary: 'purple',
+    buttonTextColor: 'white',
 }
 
 export const darkTheme: ThemeState = {
@@ -29,13 +33,15 @@ export const darkTheme: ThemeState = {
     currentTheme: 'light',
     dividerColor: 'rgba(0,0,0,0.5)',
     colors: {
-        primary: 'green',
+        primary: '#77E0A7',
         background: 'black',
         card: 'green',
-        text: 'yellow',
+        text: 'white',
         border: 'purple',
         notification: 'red',
-    }
+    },
+    secondary: 'purple',
+    buttonTextColor: 'black',
 }
 
 export const themeReducer = ( state: ThemeState , action: ThemeAction ) => {

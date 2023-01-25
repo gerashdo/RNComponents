@@ -1,12 +1,15 @@
 
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { StyleSheet } from 'react-native';
 import { Switch, Text, View } from 'react-native'
 import { CustomSwitch } from '../components/CustomSwitch';
 import { HeaderTitle } from '../components/HeaderTitle';
+import { ThemeContext } from '../context/theme/ThemeContext';
 import { styles } from '../theme/appTheme';
 
 export const SwitchScreen = () => {
+
+    const { theme:{ colors } } = useContext( ThemeContext )
 
     const [ state, setState ] = useState({
         isActive: false,
@@ -47,7 +50,7 @@ export const SwitchScreen = () => {
             />
         </View>
 
-        <Text style={ localStyles.stateText }>
+        <Text style={{ ...localStyles.stateText, color: colors.text }}>
             { JSON.stringify( state, null, 4 )}
         </Text>
     </View>

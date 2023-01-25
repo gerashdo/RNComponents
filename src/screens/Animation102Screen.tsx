@@ -1,10 +1,13 @@
 
-import React from 'react'
+import React, { useContext } from 'react'
 import { Animated, PanResponder, StyleSheet } from 'react-native'
 import { View } from 'react-native'
 import { useRef } from 'react';
+import { ThemeContext } from '../context/theme/ThemeContext';
 
 export const Animation102Screen = () => {
+
+  const { theme:{ secondary } } = useContext( ThemeContext )
 
   const pan = useRef( new Animated.ValueXY() ).current;
 
@@ -30,7 +33,7 @@ export const Animation102Screen = () => {
     <View style={ styles.container }>
         <Animated.View
             { ...panResponder.panHandlers }
-            style={[ pan.getLayout(), styles.box, ]}
+            style={[ pan.getLayout(), { ...styles.box, backgroundColor: secondary }, ]}
         />
     </View>
   )

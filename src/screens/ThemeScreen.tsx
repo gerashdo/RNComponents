@@ -6,7 +6,7 @@ import { styles } from '../theme/appTheme'
 
 export const ThemeScreen = () => {
 
-  const { setDarkMode, setLightMode } = useContext( ThemeContext )
+  const { setDarkMode, setLightMode, theme: { colors, buttonTextColor } } = useContext( ThemeContext )
 
   return (
     <View style={{ 
@@ -24,7 +24,7 @@ export const ThemeScreen = () => {
             style={{
               width: 160,
               height: 50,
-              backgroundColor: 'green',
+              backgroundColor: colors.primary,
               borderRadius: 10,
               justifyContent: 'center',
             }}
@@ -32,7 +32,7 @@ export const ThemeScreen = () => {
           >
             <Text
               style={{
-                color: 'white',
+                color: buttonTextColor,
                 textAlign: 'center',
                 fontWeight: 'bold',
                 fontSize: 22,
@@ -44,7 +44,7 @@ export const ThemeScreen = () => {
             style={{
               width: 160,
               height: 50,
-              backgroundColor: 'green',
+              backgroundColor: colors.primary,
               borderRadius: 10,
               justifyContent: 'center',
             }}
@@ -52,7 +52,7 @@ export const ThemeScreen = () => {
           >
             <Text
               style={{
-                color: 'white',
+                color: buttonTextColor,
                 textAlign: 'center',
                 fontWeight: 'bold',
                 fontSize: 22,
