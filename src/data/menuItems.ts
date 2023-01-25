@@ -42,5 +42,10 @@ export const menuItems: MenuItem[] = [
         icon: 'albums-outline',
         component: 'ModalScreen'
     },
+    {
+        name: 'Infinite scroll',
+        icon: 'download-outline',
+        component: 'InfiniteScreen'
+    },
 
 ]
