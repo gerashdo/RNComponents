@@ -52,5 +52,10 @@ export const menuItems: MenuItem[] = [
         icon: 'tablet-landscape-outline',
         component: 'SlidesScreen'
     },
+    {
+        name: 'Themes',
+        icon: 'flask-outline',
+        component: 'ThemeScreen'
+    },
 
 ]

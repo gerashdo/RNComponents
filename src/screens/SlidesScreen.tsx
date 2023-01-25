@@ -1,4 +1,3 @@
-import { useNavigation } from '@react-navigation/native';
 import { StackScreenProps } from '@react-navigation/stack';
 import React, { useRef, useState } from 'react'
 import { Animated, Dimensions, SafeAreaView, StyleSheet, TouchableOpacity } from 'react-native';
@@ -7,6 +6,7 @@ import { ImageSourcePropType, Text, View } from 'react-native'
 
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import Icon from 'react-native-vector-icons/Ionicons';
+
 import { RootStackParamList, Navigator } from '../navigator/Navigator';
 import { useAnimation } from '../hooks/useAnimation';
 
@@ -18,7 +18,7 @@ interface Slide {
 
 interface Props extends StackScreenProps<RootStackParamList,'SlidesScreen'>{}
 
-const { width: windowWidth, height: windowHeight } = Dimensions.get('window')
+const { width: windowWidth } = Dimensions.get('window')
 
 const items: Slide[] = [
     {
