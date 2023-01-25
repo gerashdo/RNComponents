@@ -34,6 +34,7 @@ export const Navigator = () => {
               backgroundColor: 'white'
             }
         }}
+        initialRouteName="HomeScreen"
         
     >
       <Stack.Screen name="HomeScreen" component={ HomeScreen } />
