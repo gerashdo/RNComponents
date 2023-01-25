@@ -47,5 +47,10 @@ export const menuItems: MenuItem[] = [
         icon: 'download-outline',
         component: 'InfiniteScreen'
     },
+    {
+        name: 'Slides',
+        icon: 'tablet-landscape-outline',
+        component: 'SlidesScreen'
+    },
 
 ]
