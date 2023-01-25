@@ -6,12 +6,15 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons';
 import { MenuItem } from '../interfaces/appInterfaces'
 import { RootStackParamList } from '../navigator/Navigator';
+import { useContext } from 'react';
+import { ThemeContext } from '../context/theme/ThemeContext';
 
 interface Props {
     menuItem: MenuItem
 }
 
 export const ListMenuItem = ( { menuItem }: Props ) => {
+    const { theme:{ colors }} = useContext( ThemeContext )
 
     const navigator = useNavigation<StackNavigationProp<RootStackParamList>>()
 
@@ -26,7 +29,7 @@ export const ListMenuItem = ( { menuItem }: Props ) => {
                 <Icon 
                     name={ menuItem.icon } 
                     size={ 20 } 
-                    color="gray"
+                    color={ colors.primary }
                     />
                 <Text style={ styles.textItem }>
                     { menuItem.name }
@@ -37,7 +40,7 @@ export const ListMenuItem = ( { menuItem }: Props ) => {
                 <Icon 
                     name='chevron-forward-outline'
                     size={ 20 } 
-                    color="gray"
+                    color={ colors.primary }
                     />
             </View>
         </TouchableOpacity>
